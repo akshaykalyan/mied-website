@@ -198,5 +198,7 @@ body > div:nth-child(4) > div > div.eight.wide.column > div > p{
   overflow: hidden;
 }
 #gallery{
-scrollbar-darkshadow-color: #41ABE5;
+}
+.ui.segment.pad{
+  margin-top: 42px;
 }

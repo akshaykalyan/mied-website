@@ -139,8 +139,8 @@ var announcement_data = [
 
 var facilities = [
     {
-        title: "asajfgjh",
-        img_link: "https://www.iitr.ac.in/departments/ME/uploads/Brochure%20PG%20Prorgram%20on%20Additive%20_%20Joining%20Technologies%20%28MIED%29.pdf",
+        title: "Advanced Manufacturing Processes Lab",
+        img_link: "https://iitr.ac.in/mechanical/amplab/images/banner/slider1.jpg",
         key_features: ["Asdad", "asdasd", "asdasd"],
         brief: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum corrupti similique itaque nesciunt voluptatem officiis quas sapiente? Cum molestiae laudantium sit qui temporibus? Explicabo illo neque esse officia excepturi, ipsum facilis exercitationem culpa alias odio labore laborum enim iste optio. Similique sed quia laudantium alias quo dicta, ea ex aut?",
         view_more_link: "asasdasfsdafa"
