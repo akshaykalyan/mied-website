@@ -140,31 +140,44 @@ var announcement_data = [
 var facilities = [
     {
         title: "Advanced Manufacturing Processes Lab",
-        img_link: "https://iitr.ac.in/mechanical/amplab/images/banner/slider1.jpg",
-        key_features: ["Asdad", "asdasd", "asdasd"],
-        brief: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum corrupti similique itaque nesciunt voluptatem officiis quas sapiente? Cum molestiae laudantium sit qui temporibus? Explicabo illo neque esse officia excepturi, ipsum facilis exercitationem culpa alias odio labore laborum enim iste optio. Similique sed quia laudantium alias quo dicta, ea ex aut?",
-        view_more_link: "asasdasfsdafa"
+        img_link: "assets/images/facility/amplab/slider1.jpg",
+        key_features: ["Ultrasonic Machine", "NC Spark Erosion Facility", "Surface Roughness Measuring Facility", "High Speed Video Camera", "Precision Weighing Facility"],
+        brief: "The Advanced Manufacturing Processes (AMP) laboratory provides the state of the art facilities for realizing next-generation products and educating the next generation of engineers. This lab provides a multipurpose and interdisciplinary environment for both training and research related machining. The focus of the lab is on the development of efficient non-traditional processes as well as system-level manufacturing solutions.",
+        view_more_link: "https://iitr.ac.in/mechanical/amplab/"
     },
     {
-        title: "asajfgjh",
-        img_link: "https://www.iitr.ac.in/departments/ME/uploads/Brochure%20PG%20Prorgram%20on%20Additive%20_%20Joining%20Technologies%20%28MIED%29.pdf",
-        key_features: ["Asdad", "asdasd", "asdasd"],
-        brief: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum corrupti similique itaque nesciunt voluptatem officiis quas sapiente? Cum molestiae laudantium sit qui temporibus? Explicabo illo neque esse officia excepturi, ipsum facilis exercitationem culpa alias odio labore laborum enim iste optio. Similique sed quia laudantium alias quo dicta, ea ex aut?",
-        view_more_link: "asasdasfsdafa"
+        title: "Intelligent Machinery Condition Monitoring Laboratory",
+        img_link: "assets/images/facility/IMCM/slider1.jpg",
+        key_features: ["Bearing Test Rig", "Bearing Diagnostics Test System",],
+        brief: "IMCML is dedicated towards research in the field of fault diagnosis and prognosis for rotating element. The research work mainly focuses on bearing fault detection, isolation, diagnosis, prognosis etc. The lab is equipped with bearing prognostic test system and bearing diagnostic test system and various experimental facilities.",
+        view_more_link: "https://iitr.ac.in/mechanical/IMCM/"
+    }, {
+        title: "Sustainable Power & Energy System Lab",
+        img_link: "assets/images/facility/sustainablepower/slider1.png",
+        key_features: ["Constant Temperature Heating Cooling Bath", "Fourier T Fourier-Transform Infrared Spectrometer", "Thermal Property Analyser Specification", "Probe Sonicator"],
+        brief: "Sustainable Power and Energy System Lab (SPES Lab) is situated at the ground floor of east block in Mechanical & Industrial Engineering Department, IIT Roorkee. The aim of this laboratory is to train undergraduate, post graduate, and research scholar students in the area of sustainable power with the objective to research and study in this field.",
+        view_more_link: "https://iitr.ac.in/mechanical/sustainablepower/"
     },
 ]
+
+facilities_select = 0
 
 var app = new Vue({
     el: '#app',
     data: {
         nav_data,
         announcement_data,
-        event_data
-
+        event_data,
+        facilities,
+        facilities_select
     },
     methods: {
         open_page: function (s) {
             window.open(s, "_blank");
+        },
+        change_facility_select: function (s) {
+            this.facilities_select = s
+            console.log(s)
         }
     },
     filters: {

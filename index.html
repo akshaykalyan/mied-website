@@ -224,9 +224,6 @@
                             and Production & Industrial Engineering. The faculty actively participates in sponsored
                             research and
                             consultancy work.</p>
-
-
-
                         <div>
 
                         </div>
@@ -287,41 +284,40 @@
         </div>
 
         <div class="ui segment basic">
-            <div class="ui grid">
+            <div class="ui stackable grid ">
                 <div class="four wide column">
                     <div class="ui  vertical raised fluid pointing menu">
                         <div class="item">
                             <h3 class="ui header">Facilities</h3>
                         </div>
-                        <a class="item">
-                            Home
+
+                        <a v-for="(item, index) in facilities" :key="index" class="item"
+                            :class="{ active: index===facilities_select}" @click="change_facility_select(index)">
+                            {{item.title}}
                         </a>
-                        <a class="item">
-                            Messages
-                        </a>
-                        <a class="item active">
-                            Friends
-                        </a>
+
                     </div>
                 </div>
                 <div class="eight wide column">
                     <div class="segment  ui">
-                        <img src="assets/images/mied photos/2017-09-29 (1).jpg" style="width: 100%;" alt="" srcset="">
+                        <img loading="lazy" :src="facilities[facilities_select]['img_link']" style="width: 100%;" alt=""
+                            srcset="">
                     </div>
 
                 </div>
                 <div class="four wide column">
                     <div class="ui  segment">
-                        <a class="ui black ribbon label">Brief</a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora veniam harum nemo ipsum
-                            delectus nam, beatae debitis expedita modi itaque.</p>
-                        <div class="ui black ribbon label">Key Features</div>
+                        <div class="ui black ribbon label">Brief</div>
+                        <p>{{facilities[facilities_select]["brief"]}}</p>
+                        <div class="ui black ribbon label">Key Equipments</div>
                         <div class="ui bulleted list">
-                            <div class="item">Gaining Access</div>
-                            <div class="item">Inviting Friends</div>
+                            <div class="item" v-for="(i, index) in facilities[facilities_select]['key_features']"
+                                :key="index">{{i}}</div>
 
                         </div>
-                        <button class="ui button">
+                        <div class="ui  divider">
+                        </div>
+                        <button class="ui button" @click="open_page(facilities[facilities_select]['view_more_link'])">
                             More Details
                         </button>
                         <p></p>
@@ -368,9 +364,8 @@
     </div> -->
     </div>
 
-    <div id="infomatic" class="segment ui  padded inverted pad">
-        <div class="ui segment basic  tablet computer only"></div>
-        <div class="ui six small stackable statistics centered inverted">
+    <div id="infomatic" class="segment ui   inverted pad">
+        <div class="ui six small stackable statistics centered inverted grid">
             <div class="statistic">
                 <div class="value">
                     ₹98.60 Cr.
@@ -435,7 +430,6 @@
                 </div>
             </div>
 
-            <div class="ui segment basic"></div>
 
         </div>
     </div>
