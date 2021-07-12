@@ -47,11 +47,11 @@
                     <div class="ui dropdown item" href="https://www.iitr.ac.in/departments/ME/pages/Academics.html">
                         Academics <i class="dropdown icon"></i>
                         <div class="menu">
-                            <a class="item" href="/departments/ME/pages/Academics+Courses_Offered.html">Courses
+                            <a class="item" href="departments/ME/pages/Academics+Courses_Offered.html">Courses
                                 Offered</a>
-                            <a class="item" href="/departments/ME/pages/Academics+_en_Course_Structure__en_.html">Course
+                            <a class="item" href="departments/ME/pages/Academics+_en_Course_Structure__en_.html">Course
                                 Structure</a>
-                            <a class="item" href="/departments/ME/pages/Academics+Placement_Record.html">Placement
+                            <a class="item" href="departments/ME/pages/Academics+Placement_Record.html">Placement
                                 Record</a>
                             <a class="item"
                                 href="https://www.iitr.ac.in/departments/ME/pages/Downloads.html">Downloads</a>
@@ -139,7 +139,6 @@
             </div>
         </div>
 
-
         <div class="ui mobile only grid">
             <div class="ui top fixed inverted borderless huge menu">
                 <a class=" item">Department of <br>Mechanical and <br>Industrial Engineering</a>
@@ -196,135 +195,146 @@
 
         <div class="segment ui  basic " style="margin-top: 29px;">
             <div class="ui  stackable grid ">
-                <div class="eight wide column">
-                    <div class="ui piled  segment">
-                        <h3 class="ui header">
-                            <i class="users circular icon"></i>
+                <div class="row">
+
+                    <div class="eight wide column">
+                        <div class="ui piled  segment">
+                            <h3 class="ui header">
+                                <i class="users circular icon"></i>
+                                <div class="content">
+                                    About Us
+                                </div>
+                            </h3>
+                            <p class="discription">The Department of Mechanical Engineering came into being in the year
+                                1946
+                                and the
+                                first batch of Mechanical Engineers graduated in the year 1949. The department was
+                                renamed
+                                as Department
+                                of Mechanical & Industrial Engineering on its silver jubilee in 1974 when an
+                                undergraduate
+                                programme in
+                                Industrial Engineering was started. At present it offers both undergraduate and
+                                postgraduate
+                                courses in
+                                various facets of Mechanical and Industrial Engineering. The department offers Master of
+                                Technology
+                                courses in Machine Design Engineering, Production and Industrial Systems Engineering,
+                                Thermal System
+                                Engineering, Welding Engineering and CAD, CAM and Robotics. The department has
+                                laboratory
+                                and workshop
+                                facilities with modern sophisticated equipment to carry out research in all areas
+                                related to
+                                Mechanical
+                                and Production & Industrial Engineering. The faculty actively participates in sponsored
+                                research and
+                                consultancy work.</p>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" four wide column">
+                        <h3 class="ui top attached   header">
+                            <i class="calendar alternate  icon"></i>
                             <div class="content">
-                                About Us
+                                Events
                             </div>
                         </h3>
-
-                        <p class="discription">The Department of Mechanical Engineering came into being in the year 1946
-                            and the
-                            first batch of Mechanical Engineers graduated in the year 1949. The department was renamed
-                            as Department
-                            of Mechanical & Industrial Engineering on its silver jubilee in 1974 when an undergraduate
-                            programme in
-                            Industrial Engineering was started. At present it offers both undergraduate and postgraduate
-                            courses in
-                            various facets of Mechanical and Industrial Engineering. The department offers Master of
-                            Technology
-                            courses in Machine Design Engineering, Production and Industrial Systems Engineering,
-                            Thermal System
-                            Engineering, Welding Engineering and CAD, CAM and Robotics. The department has laboratory
-                            and workshop
-                            facilities with modern sophisticated equipment to carry out research in all areas related to
-                            Mechanical
-                            and Production & Industrial Engineering. The faculty actively participates in sponsored
-                            research and
-                            consultancy work.</p>
-                        <div>
-
+                        <div class="ui attached   segment" style="height: 85%; overflow: 'auto';">
+                            <div class="ui middle aligned selection list">
+                                <div class="item" v-for="(event, index) in event_data" :key="index"
+                                    @click="open_page(event.link)">
+                                    <div class="content">
+                                        <a class="header">{{event.title}}</a>
+                                        <div class="extra">
+                                            <i class="calendar icon"></i>{{event.date}}
+                                            <span v-if="event.location" @click="open_page(event.location.link)"><i
+                                                    class="map marker alternate icon"></i>{{event.location.title}}</span>
+                                        </div>
+                                        <div class="description">{{event.disc}}</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class=" four wide column">
-                    <h3 class="ui top attached   header">
-                        <i class="calendar alternate  icon"></i>
-                        <div class="content">
-                            Events
-                        </div>
-                    </h3>
-                    <div class="ui attached   segment" style="height: 85%; overflow: 'auto';">
-                        <div class="ui middle aligned selection list">
-                            <div class="item" v-for="(event, index) in event_data" :key="index"
-                                @click="open_page(event.link)">
-                                <div class="content">
-                                    <a class="header">{{event.title}}</a>
-                                    <div class="extra">
-                                        <i class="calendar icon"></i>{{event.date}}
-                                        <span v-if="event.location" @click="open_page(event.location.link)"><i
-                                                class="map marker alternate icon"></i>{{event.location.title}}</span>
+                    <div class="four wide column">
+                        <h3 class="ui top attached   header">
+                            <i class="bullhorn
+                      icon"></i>
+                            <div class="content">
+                                Announcements
+                            </div>
+                        </h3>
+                        <div class="ui attached  segment" style="height: 85%;">
+                            <div class="ui middle aligned selection list">
+                                <div class="item" v-for="(announcement, index) in announcement_data" :key="index"
+                                    @click="open_page(announcement.link)">
+                                    <div class="content">
+                                        <a class="header">{{announcement.title}}</a>
+                                        <div class="extra">
+                                            <i class="calendar icon"></i>{{announcement.date}}
+                                        </div>
+                                        <div class="description truncate">{{announcement.disc}}</div>
                                     </div>
-                                    <div class="description">{{event.disc}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="ui segment basic">
+                        <div class="ui stackable grid ">
+                            <div class="four wide column">
+                                <div class="ui  vertical raised fluid pointing menu">
+                                    <div class="item">
+                                        <h3 class="ui header">Facilities</h3>
+                                    </div>
+
+                                    <a v-for="(item, index) in facilities" :key="index" class="item"
+                                        :class="{ active: index===facilities_select}"
+                                        @click="change_facility_select(index)">
+                                        {{item.title}}
+                                    </a>
 
                                 </div>
                             </div>
+                            <div class="eight wide column">
+                                <div class="segment  ui">
+                                    <img loading="lazy" :src="facilities[facilities_select]['img_link']"
+                                        style="width: 100%;" alt="" srcset="">
+                                </div>
 
+                            </div>
+                            <div class="four wide column">
+                                <div class="ui  segment">
+                                    <div class="ui black ribbon label">Brief</div>
+                                    <p>{{facilities[facilities_select]["brief"]}}</p>
+                                    <div class="ui black ribbon label">Key Equipments</div>
+                                    <div class="ui bulleted list">
+                                        <div class="item"
+                                            v-for="(i, index) in facilities[facilities_select]['key_features']"
+                                            :key="index">{{i}}</div>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="four wide column">
-                    <h3 class="ui top attached   header">
-                        <i class="bullhorn
-                  icon"></i>
-                        <div class="content">
-                            Announcements
-                        </div>
-                    </h3>
-                    <div class="ui attached  segment" style="height: 85%;">
-                        <div class="ui middle aligned selection list">
-                            <div class="item" v-for="(announcement, index) in announcement_data" :key="index"
-                                @click="open_page(announcement.link)">
-                                <div class="content">
-                                    <a class="header">{{announcement.title}}</a>
-                                    <div class="extra">
-                                        <i class="calendar icon"></i>{{announcement.date}}
                                     </div>
-                                    <div class="description truncate">{{announcement.disc}}</div>
+                                    <div class="ui  divider">
+                                    </div>
+                                    <button class="ui button"
+                                        @click="open_page(facilities[facilities_select]['view_more_link'])">
+                                        More Details
+                                    </button>
+                                    <p></p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
-        <div class="ui segment basic">
-            <div class="ui stackable grid ">
-                <div class="four wide column">
-                    <div class="ui  vertical raised fluid pointing menu">
-                        <div class="item">
-                            <h3 class="ui header">Facilities</h3>
-                        </div>
 
-                        <a v-for="(item, index) in facilities" :key="index" class="item"
-                            :class="{ active: index===facilities_select}" @click="change_facility_select(index)">
-                            {{item.title}}
-                        </a>
-
-                    </div>
-                </div>
-                <div class="eight wide column">
-                    <div class="segment  ui">
-                        <img loading="lazy" :src="facilities[facilities_select]['img_link']" style="width: 100%;" alt=""
-                            srcset="">
-                    </div>
-
-                </div>
-                <div class="four wide column">
-                    <div class="ui  segment">
-                        <div class="ui black ribbon label">Brief</div>
-                        <p>{{facilities[facilities_select]["brief"]}}</p>
-                        <div class="ui black ribbon label">Key Equipments</div>
-                        <div class="ui bulleted list">
-                            <div class="item" v-for="(i, index) in facilities[facilities_select]['key_features']"
-                                :key="index">{{i}}</div>
-
-                        </div>
-                        <div class="ui  divider">
-                        </div>
-                        <button class="ui button" @click="open_page(facilities[facilities_select]['view_more_link'])">
-                            More Details
-                        </button>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
     </div>
     <!-- <h2 class="ui horizontal header divider">
@@ -364,9 +374,10 @@
     </div> -->
     </div>
 
-    <div id="infomatic" class="segment ui   inverted pad">
-        <div class="ui six small stackable statistics centered inverted grid">
-            <div class="statistic">
+    <div id="infomatic" class="segment ui   inverted ">
+        <div class="ui segment basic"></div>
+        <div id="info-pad" class="ui six  small centered stackable statistics very padded  inverted ">
+            <div class="statistic  ">
                 <div class="value">
                     ₹98.60 Cr.
                 </div>
@@ -429,9 +440,10 @@
 
                 </div>
             </div>
-
-
         </div>
+        <div class="ui segment basic"></div>
+
+    </div>
     </div>
 
 
@@ -746,6 +758,18 @@
                 gallery_height: 800,							//gallery height
             });
 
+            var $homeIcon = $('#info-pad');
+
+            $(window).resize(function () {
+                if (window.innerWidth <= 767) {
+                    $homeIcon.addClass('two');
+                    $homeIcon.removeClass('six');
+                }
+                else {
+                    $homeIcon.removeClass('two');
+                    $homeIcon.addClass('six');
+                }
+            });
 
         });
     </script>

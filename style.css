@@ -130,6 +130,9 @@
           padding-left: 4rem;
           padding-right: calc(4rem + 20px);
         }
+        .ui.tablet.computer.only{
+          display: none;
+        }
       }
 
       .slick-dots {
@@ -201,4 +204,9 @@ body > div:nth-child(4) > div > div.eight.wide.column > div > p{
 }
 .ui.segment.pad{
   margin-top: 42px;
+}
+
+.ui.top.fixed.inverted.borderless.huge.menu{
+  position: relative;
+  padding-top: 14px;
 }
