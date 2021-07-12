@@ -1,0 +1,202 @@
+
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: grayscale;
+      }
+
+
+
+      .ui.vertical.segment:not(.inverted) {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+
+      .six.wide.column img {
+        width: 100%;
+      }
+
+      .ui.borderless.inverted.menu {
+        /* background-color: #2f2f2f; */
+        border-radius: 4px;
+        flex-wrap: wrap;
+      }
+
+      .ui.borderless.inverted.menu .active.item {
+        background-color: black;
+      }
+
+      span.sub {
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      .ten.wide.column h1 {
+        font-size: 3rem;
+      }
+
+      .ten.wide.column p {
+        font-size: 1.5rem;
+      }
+
+      p code {
+        color: #c7254e;
+        background-color: #f9f2f4;
+        border-radius: 4px;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
+
+      .ui.tablet.computer.only.padded.grid {
+        position: absolute;
+        z-index: 8;
+        width: 100%;
+        top: 1rem;
+      }
+
+      .ui.mobile.only.grid .ui.menu .ui.vertical.menu {
+        display: none;
+      }
+
+      .ui.mobile.only.grid .ui.vertical.menu .dropdown.icon {
+        float: unset;
+      }
+
+      .ui.mobile.only.grid .ui.vertical.menu .dropdown.icon:before {
+        content: "\f0d7";
+      }
+
+      .ui.mobile.only.grid .ui.vertical.menu .ui.dropdown.item .menu {
+        position: static;
+        width: 100%;
+        background-color: unset;
+        border: none;
+      }
+
+      .ui.mobile.only.grid .ui.vertical.menu .ui.dropdown.item {
+        background-color: rgb(47, 47, 47);
+      }
+
+      .ui.mobile.only.grid .ui.vertical.menu .ui.dropdown.item .menu {
+        margin-top: 6px;
+      }
+
+      .ui.mobile.only.grid .ui.vertical.menu .ui.dropdown.item .menu .header,
+      .ui.mobile.only.grid .ui.vertical.menu .ui.dropdown.item .menu .item {
+        color: rgba(255, 255, 255, 0.9) !important;
+      }
+
+
+
+      .slide .ui.text.container {
+        max-width: 70%;
+      }
+
+      .slick-dotted.slick-slider {
+        margin-bottom: 0;
+      }
+
+      .slick-prev.slick-arrow {
+        padding-left: 8rem;
+        padding-right: calc(8rem + 20px);
+        display: inline-block;
+        height: 100%;
+        z-index: 32;
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+
+      .slick-next.slick-arrow {
+        padding-left: 8rem;
+        padding-right: calc(8rem + 20px);
+        display: inline-block;
+        height: 100%;
+        z-index: 32;
+        background: linear-gradient(
+          to left,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0.0001) 100%
+        );
+      }
+
+      @media only screen and (max-width: 767px) {
+        .slick-prev.slick-arrow {
+          padding-left: 4rem;
+          padding-right: calc(4rem + 20px);
+        }
+
+        .slick-next.slick-arrow {
+          padding-left: 4rem;
+          padding-right: calc(4rem + 20px);
+        }
+      }
+
+      .slick-dots {
+        bottom: 15px;
+      }
+
+      .slide .ui.segment h1 {
+        font-size: 3rem;
+      }
+
+      .slide .ui.segment p {
+        font-size: 1.5rem;
+      }
+.menu.nav{
+  border-radius: 0rem;
+}
+.inverted.nav > a.active.item{
+  border-radius: 0rem;
+}
+#root > div > div > div.ui.menu.massive.inverted{
+  margin: 0px ;
+}
+#root > div > div > div.ui.small.menu.inverted.nav.seven.item{
+  margin-top: 0px;
+}
+#app > div.ui.tablet.computer.only.sticky > div:nth-child(1) > div > div:nth-child(1) > img{
+  margin-right: 12px;
+}
+/* .ui.attached.block.header{
+  background-color: #1B1C1D
+  ;
+} */
+.li-a{
+color: rgba(255,255,255,.5);
+}
+
+.li-a:hover{
+color: #fff ; 
+}
+#infomatic{
+  border-radius: 0px;
+}
+body > div:nth-child(4) > div > div.eight.wide.column > div > p{
+  color: rgba(0,0,0,.70) ;
+}
+.slickdot {
+  height: 15px;
+  width: 15px;
+  background: lightgray;
+  border-radius: 50px;
+  display: inline-block;
+  box-shadow:0px 0px 4px gray inset;
+}
+
+.slickdot.active {
+  background-color: #41ABE5;
+  box-shadow: inset 0px 0px 4px #888888;
+}
+/* #app > div:nth-child(4) > div > div.eight.wide.column > div > p{
+  font-style: italic
+} */
+.truncate {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+#gallery{
+
+}
