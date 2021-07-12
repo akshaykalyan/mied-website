@@ -198,5 +198,5 @@ body > div:nth-child(4) > div > div.eight.wide.column > div > p{
   overflow: hidden;
 }
 #gallery{
-
+scrollbar-darkshadow-color: #41ABE5;
 }
