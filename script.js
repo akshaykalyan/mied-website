@@ -157,6 +157,38 @@ var facilities = [
         key_features: ["Constant Temperature Heating Cooling Bath", "Fourier T Fourier-Transform Infrared Spectrometer", "Thermal Property Analyser Specification", "Probe Sonicator"],
         brief: "Sustainable Power and Energy System Lab (SPES Lab) is situated at the ground floor of east block in Mechanical & Industrial Engineering Department, IIT Roorkee. The aim of this laboratory is to train undergraduate, post graduate, and research scholar students in the area of sustainable power with the objective to research and study in this field.",
         view_more_link: "https://iitr.ac.in/mechanical/sustainablepower/"
+    }, {
+        title: "Advanced Manufacturing Processes Lab",
+        img_link: "assets/images/facility/amplab/slider1.jpg",
+        key_features: ["Ultrasonic Machine", "NC Spark Erosion Facility", "Surface Roughness Measuring Facility", "High Speed Video Camera", "Precision Weighing Facility"],
+        brief: "The Advanced Manufacturing Processes (AMP) laboratory provides the state of the art facilities for realizing next-generation products and educating the next generation of engineers. This lab provides a multipurpose and interdisciplinary environment for both training and research related machining. The focus of the lab is on the development of efficient non-traditional processes as well as system-level manufacturing solutions.",
+        view_more_link: "https://iitr.ac.in/mechanical/amplab/"
+    },
+    {
+        title: "Intelligent Machinery Condition Monitoring Laboratory",
+        img_link: "assets/images/facility/IMCM/slider1.jpg",
+        key_features: ["Bearing Test Rig", "Bearing Diagnostics Test System",],
+        brief: "IMCML is dedicated towards research in the field of fault diagnosis and prognosis for rotating element. The research work mainly focuses on bearing fault detection, isolation, diagnosis, prognosis etc. The lab is equipped with bearing prognostic test system and bearing diagnostic test system and various experimental facilities.",
+        view_more_link: "https://iitr.ac.in/mechanical/IMCM/"
+    }, {
+        title: "Sustainable Power & Energy System Lab",
+        img_link: "assets/images/facility/sustainablepower/slider1.png",
+        key_features: ["Constant Temperature Heating Cooling Bath", "Fourier T Fourier-Transform Infrared Spectrometer", "Thermal Property Analyser Specification", "Probe Sonicator"],
+        brief: "Sustainable Power and Energy System Lab (SPES Lab) is situated at the ground floor of east block in Mechanical & Industrial Engineering Department, IIT Roorkee. The aim of this laboratory is to train undergraduate, post graduate, and research scholar students in the area of sustainable power with the objective to research and study in this field.",
+        view_more_link: "https://iitr.ac.in/mechanical/sustainablepower/"
+    }, {
+        title: "Advanced Manufacturing Processes Lab",
+        img_link: "assets/images/facility/amplab/slider1.jpg",
+        key_features: ["Ultrasonic Machine", "NC Spark Erosion Facility", "Surface Roughness Measuring Facility", "High Speed Video Camera", "Precision Weighing Facility"],
+        brief: "The Advanced Manufacturing Processes (AMP) laboratory provides the state of the art facilities for realizing next-generation products and educating the next generation of engineers. This lab provides a multipurpose and interdisciplinary environment for both training and research related machining. The focus of the lab is on the development of efficient non-traditional processes as well as system-level manufacturing solutions.",
+        view_more_link: "https://iitr.ac.in/mechanical/amplab/"
+    },
+    {
+        title: "Intelligent Machinery Condition Monitoring Laboratory",
+        img_link: "assets/images/facility/IMCM/slider1.jpg",
+        key_features: ["Bearing Test Rig", "Bearing Diagnostics Test System",],
+        brief: "IMCML is dedicated towards research in the field of fault diagnosis and prognosis for rotating element. The research work mainly focuses on bearing fault detection, isolation, diagnosis, prognosis etc. The lab is equipped with bearing prognostic test system and bearing diagnostic test system and various experimental facilities.",
+        view_more_link: "https://iitr.ac.in/mechanical/IMCM/"
     },
 ]
 

@@ -283,7 +283,7 @@
                     </div>
 
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                     <div class="ui segment basic">
                         <div class="ui stackable grid ">
                             <div class="four wide column">
@@ -331,7 +331,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             </div>
         </div>
@@ -529,25 +529,51 @@
           </div>
   
         </div> -->
-    <h2 class="ui horizontal header divider">
-        Video Gallery
-    </h2>
 
-    <div class="ui container">
-        <div class="segment ui raised pad" style="
-        margin-bottom: 42px;">
-            <div id="gallery" style="width: 100%; height: 100%;">
-                <div data-type="html5video" data-image="assets/images/mied photos/2017-09-29 (1).jpg"
-                    data-videomp4="assets/video/video.mp4" data-title="Welcome Video"
-                    data-description="Department of Mechanical and Industrial Engineering">
+
+    <div class=" ui  basic segment">
+        <div class="ui two column center aligned divided relaxed stackable grid ">
+            <div class="row">
+
+                <div class="column">
+                    <h2 class="ui horizontal divider header">
+                        Highlights
+                    </h2>
+                    <div class="segment ui basic ">
+                        <div id="gallery" style="width: 100%; height: 100%;">
+                            <div data-type="html5video" data-image="assets/images/mied photos/2017-09-29 (1).jpg"
+                                data-videomp4="assets/video/video.mp4" data-title="Welcome Video"
+                                data-description="Department of Mechanical and Industrial Engineering">
+                            </div>
+                            <div data-type="youtube" data-videoid="ePq9tAavzSM" data-title="GoPro Demo"
+                                data-description="Inaugural Prof S. Lal Memorial Lecture Mechanics Mechanisms Fracture of Magnesium by Prof Narasimhan">
+                            </div>
+                            <img src="assets/images/slider/REPROM_Flyer.png" alt="" srcset="">
+                        </div>
+                    </div>
                 </div>
-                <div data-type="youtube" data-videoid="ePq9tAavzSM" data-title="GoPro Demo"
-                    data-description="Inaugural Prof S. Lal Memorial Lecture Mechanics Mechanisms Fracture of Magnesium by Prof Narasimhan">
+                <div class="column">
+                    <h2 class="ui horizontal divider header">
+                        Common Facilities
+                    </h2>
+                    <div class="segment ui basic ">
+                        <div id="gallery2" style="width: 100%; height: 100%;">
+                            <img alt="Modern Workshop" src="assets/images/slider/workshop.jpg"
+                                data-description="The Modern Workshop at Indian Institute of Roorkee, is a common facility which provides fabrication services for projects and prototype fabrication to all the students and faculty members of the Institute.">
+                            <img alt="Image 1 Title" src="assets/images/slider/top1.jpg"
+                                data-description="Image 1 Description">
+
+                        </div>
+                    </div>
+
                 </div>
-                <img src="assets/images/slider/REPROM_Flyer.png" alt="" srcset="">
+
             </div>
         </div>
     </div>
+
+
+
 
     <h2 class="ui horizontal header divider">
         Image Gallery
@@ -753,12 +779,28 @@
 
     <script src='./unitegallery/js/unitegallery.min.js' type='text/javascript'></script>
     <script src='./unitegallery/themes/default/ug-theme-default.js' type='text/javascript'></script>
+    <script src='unitegallery/themes/slider/ug-theme-slider.js' type='text/javascript'></script>
+
     <script>
 
         $(document).ready(function () {
             $("#gallery").unitegallery({
                 gallery_width: 1600,							//gallery width		
                 gallery_height: 800,							//gallery height
+            });
+            $("#gallery2").unitegallery({
+                gallery_width: 1600,							//gallery width		
+                gallery_height: 800,							//gallery height
+                gallery_autoplay: false,
+                gallery_carousel: true,						//true,false - next button on last image goes to first image.
+                slider_enable_play_button: false,			 //enable progress indicator element
+                slider_enable_text_panel: true,
+                gallery_theme: "slider",
+                // slider_controls_always_on: false,
+                slider_textpanel_text_valign: "bottom",			//middle, top, bottom - text vertical align
+                slider_enable_bullets: false,				//enable the bullets onslider element
+
+
             });
 
             var $homeIcon = $('#info-pad');

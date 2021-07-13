@@ -210,3 +210,6 @@ body > div:nth-child(4) > div > div.eight.wide.column > div > p{
   position: relative;
   padding-top: 14px;
 }
+.ui.cards{
+    margin: 0em 0em;
+}
